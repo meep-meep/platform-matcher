@@ -41,8 +41,20 @@ var matchers = {
 };
 
 
-module.exports = function(constraints, ua) {
-    return constraints.every(function(constraint) {
-        return matchers[constraint.toLowerCase()](ua);
-    });
+module.exports = {
+    match: function(constraints, ua) {
+        return constraints.every(function(constraint) {
+            constraint = constraint.toLowerCase();
+            if(!matchers[constraint]) {
+                return false;
+            }
+            return matchers[constraint](ua);
+        });
+    },
+
+    isAKnownPlatform: function(constraints) {
+        return constraints.every(function(constraint) {
+            return matchers[constraint];
+        });
+    }
 };
