@@ -37,6 +37,9 @@ var matchers = {
     },
     'linux': function(ua) {
         return ua.isLinux;
+    },
+    'any': function() {
+        return true;
     }
 };
 
