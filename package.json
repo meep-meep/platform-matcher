@@ -1,5 +1,5 @@
 {
-  "name": "platform-matcher",
+  "name": "mm-platform-matcher",
   "version": "0.1.0",
   "description": "matches platform constraints against a user agent object",
   "main": "src/index.js",
