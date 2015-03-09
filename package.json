@@ -10,5 +10,8 @@
     "test"
   ],
   "author": "Joachim Revol-Tissot",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express-useragent": "^0.1.6"
+  }
 }

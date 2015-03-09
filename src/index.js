@@ -1,3 +1,6 @@
+var useragent = require('express-useragent');
+
+
 var matchers = {
     'android': function(ua) {
         return ua.isAndroid;
@@ -46,12 +49,13 @@ var matchers = {
 
 module.exports = {
     match: function(constraints, ua) {
+        var parsedUa = useragent.parse(ua);
         return constraints.every(function(constraint) {
             constraint = constraint.toLowerCase();
             if(!matchers[constraint]) {
                 return false;
             }
-            return matchers[constraint](ua);
+            return matchers[constraint](parsedUa);
         });
     },
 
