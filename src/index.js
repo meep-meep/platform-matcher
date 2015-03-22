@@ -63,5 +63,9 @@ module.exports = {
         return constraints.every(function(constraint) {
             return matchers[constraint];
         });
+    },
+
+    getPlatformTags: function() {
+        return Object.keys(matchers);
     }
 };
