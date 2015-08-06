@@ -32,6 +32,15 @@ var matchers = {
     'firefox': function(ua) {
         return ua.isFirefox;
     },
+    'webkit': function(ua) {
+        return ua.isChrome || ua.isSafari;
+    },
+    'ie8': function(ua) {
+        return ua.isIE;
+    },
+    'ie9': function(ua) {
+        return ua.isIE;
+    },
     'ie': function(ua) {
         return ua.isIE;
     },
