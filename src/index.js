@@ -70,7 +70,7 @@ module.exports = {
 
     isAKnownPlatform: function(constraints) {
         return constraints.every(function(constraint) {
-            return matchers[constraint];
+            return matchers[constraint.toLowerCase()];
         });
     },
 

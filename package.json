@@ -4,7 +4,8 @@
   "description": "matches platform constraints against a user agent object",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --check-leaks -R dot",
+    "cov": "mocha --require blanket -R html-cov > coverage.html"
   },
   "keywords": [
     "test"
@@ -13,5 +14,11 @@
   "license": "MIT",
   "dependencies": {
     "express-useragent": "^0.1.6"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.7",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3",
+    "mockery": "^1.4.0"
   }
 }
