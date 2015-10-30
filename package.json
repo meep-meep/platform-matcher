@@ -8,7 +8,7 @@
     "cov": "mocha --require blanket -R html-cov > coverage.html"
   },
   "keywords": [
-    "test"
+    "meep-meep"
   ],
   "author": "Joachim Revol-Tissot",
   "license": "MIT",
